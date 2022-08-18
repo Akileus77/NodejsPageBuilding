@@ -11,7 +11,8 @@
     </html>`;
 
     fs.writeFile('./files/'+i+'.html',page, function(err,data){
-        console.log(err); 
+       if (err) throw err;
+       console.log('File is created successfully.');
     })
 
  }
